@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import "./App.css";
+
+/*
+로직 정리
+1. 앱 실행 시 현재 위치 기반의 날씨정보가 보인다
+2. 날씨정보: 도시명, 섭씨, 화씨, 흐림여부
+3. 5개의 버튼이 있음(1개: 현위치, 나머지: 다른 도시)
+4. 도시버튼을 클릭 시 도시별 날씨가 나온다
+5. 현 위치 버튼을 클릭 시 다시 현위치 기반의 날씨가 나온다
+6. 버튼 클릭시 데이터를 들고오는 동안 로딩스피너를 표시한다
+*/
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const getCurrentLocation = () => {
+    console.log("getCurrentLocation");
+  };
+  useEffect(() => {
+    getCurrentLocation();
+  }, []);
+
+  return <div></div>;
 }
 
 export default App;
