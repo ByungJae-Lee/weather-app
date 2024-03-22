@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 /*
@@ -13,7 +13,11 @@ import "./App.css";
 
 function App() {
   const getCurrentLocation = () => {
-    console.log("getCurrentLocation");
+    navigator.geolocation.getCurrentPosition((position) => {
+      let lat = position.coords.latitude;
+      let lon = position.coords.longitude;
+      console.log(lat, lon);
+    });
   };
   useEffect(() => {
     getCurrentLocation();
