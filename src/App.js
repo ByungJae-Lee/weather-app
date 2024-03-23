@@ -6,9 +6,9 @@ import WeatherButton from "./component/WeatherButton";
 
 /*
 로직 정리
-1. 앱 실행 시 현재 위치 기반의 날씨정보가 보인다
-2. 날씨정보: 도시명, 섭씨, 화씨, 흐림여부
-3. 5개의 버튼이 있음(1개: 현위치, 나머지: 다른 도시)
+1. 앱 실행 시 현재 위치 기반의 날씨정보가 보인다 V
+2. 날씨정보: 도시명, 섭씨, 화씨, 흐림여부 V
+3. 5개의 버튼이 있음(1개: 현위치, 나머지: 다른 도시) 
 4. 도시버튼을 클릭 시 도시별 날씨가 나온다
 5. 현 위치 버튼을 클릭 시 다시 현위치 기반의 날씨가 나온다
 6. 버튼 클릭시 데이터를 들고오는 동안 로딩스피너를 표시한다
@@ -16,6 +16,7 @@ import WeatherButton from "./component/WeatherButton";
 
 function App() {
   const [weather, setWeather] = useState(null);
+  const cities = ["Berlin", "Tokyo", "Hochiminh", "Sydney"];
   const getCurrentLocation = () => {
     navigator.geolocation.getCurrentPosition((position) => {
       let lat = position.coords.latitude;
@@ -41,7 +42,7 @@ function App() {
     <div>
       <div className="container">
         <WeatherBox weather={weather} />
-        <WeatherButton />
+        <WeatherButton cities={cities} />
       </div>
     </div>
   );
