@@ -1,0 +1,33 @@
+body {
+  background: url(https://t3.ftcdn.net/jpg/06/66/93/58/360_F_666935846_DUPfwWy1ylKdvblnYC1bP1mVu5UOsC96.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  /* 
+  display: flex는 자식요소들을 기본 가로로 만든다
+  세로 정렬하고 싶다면 flex-direction: column 
+  */
+  display: flex;
+  flex-direction: column;
+  /* 
+  가로 가운데 정렬 justify-content: center
+  세로 가운데 정렬 align-items: center
+   */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.weather-box {
+  border: 3px solid white;
+  border-radius: 30px;
+  padding: 50px;
+  background-color: aqua;
+}
+.weather-button {
+  margin: 10px;
+}
+.weather-button button {
+  margin: 10px;
+}
