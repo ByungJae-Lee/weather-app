@@ -31,3 +31,6 @@ body {
 .weather-button button {
   margin: 10px;
 }
+.weather-button button:hover {
+  background-color: brown;
+}
