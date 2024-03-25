@@ -21,15 +21,17 @@ body {
 }
 .weather-box {
   border: 3px solid white;
-  border-radius: 30px;
+  border-radius: 20px;
   padding: 50px;
-  background-color: aqua;
+  width: 600px;
+  background-color: wheat;
 }
 .weather-button {
   margin: 10px;
 }
 .weather-button button {
   margin: 10px;
+  font-size: 20px;
 }
 .weather-button button:hover {
   background-color: brown;
