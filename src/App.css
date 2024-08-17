@@ -20,10 +20,10 @@ body {
   height: 100vh;
 }
 .weather-box {
-  border: 3px solid white;
+  border: 5px solid white;
   border-radius: 20px;
   padding: 50px;
-  width: 600px;
+  width: 630px;
   background-color: wheat;
 }
 .weather-button {
